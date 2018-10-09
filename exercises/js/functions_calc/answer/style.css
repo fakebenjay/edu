@@ -7,9 +7,11 @@ Sometimes, when we stretch out to larger screens, we need to make minor tweaks f
 You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
 */
 
+
 /* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
 /* Start your base/mobile styles here */
 
 * {
@@ -21,10 +23,31 @@ html, body {
     font-size: 16px;
 }
 
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+td, th {
+    width: 20%;
+    display: inline-block;
+}
+
+input {
+    max-width: 100%;
+    display: block;
+}
+
+
 /* Tablet/Desktop overrides */
 
 @media(min-width: 681px) {
     /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    td, th {
+        width: auto;
+        display: table-cell;
+    }
 }
 
 @media(min-width: 729px) {

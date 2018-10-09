@@ -7,9 +7,11 @@ Sometimes, when we stretch out to larger screens, we need to make minor tweaks f
 You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
 */
 
+
 /* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
 /* Start your base/mobile styles here */
 
 * {
@@ -20,6 +22,56 @@ html, body {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
 }
+
+h1, p {
+    text-align: center;
+}
+
+div.hotspot {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+div.hotspot img {
+    width: 100%;
+}
+
+div.modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 200%;
+    left: 0;
+    padding: 1em;
+    transition: top 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+div.modal.active {
+    top: 0;
+}
+
+div.modal div.inner {
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    background-color: #FFFFFF;
+}
+
+.spot {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#bananas {
+    background-color: #FFF600;
+    top: 25%;
+    right: 10%;
+}
+
 
 /* Tablet/Desktop overrides */
 

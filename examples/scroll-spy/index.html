@@ -9,10 +9,10 @@
     <!-- first step to a responsive site -->
     <title>HTML Skeleton</title>
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Your styles should be called here -->
+    <link href="style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,11 +24,24 @@
 
   <body>
     <!-- YOUR CONTENT GOES HERE -->
+    <div class="content">
+      <div class="slide">
+        <h1>Welcome! Play with the lights</h1>
+      </div>
 
-    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <div class="slide lightsOff">
+        <img src="light-switch-off.jpg" />
+      </div>
+
+      <div class="slide lightsOn">
+        <img src="light-switch-on.jpg" />
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <!-- Your javascript should be called here -->
+    <script src="spy.js"></script>
   </body>
 
 </html>
